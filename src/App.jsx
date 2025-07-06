@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
       <Header />
       <Hero />
       <About />
