@@ -34,18 +34,18 @@ const ClientWork = () => {
       industry: "Education",
       impact: "Students studying in Canada, Germany, UK",
       testimonial: "Professional guidance that made my medical school dreams in Canada come true!",
-      image: "src/img/tundua_img.png",
+      image: "/img/tundua_img.png",
       gradient: "from-blue-500 to-indigo-600"
     },
     {
       name: "StreetNG",
       category: "Multi-Business Platform",
       description: "Comprehensive platform combining fine dining, bespoke tailoring, and real estate services under one unified brand experience.",
-      url: "https://streetngsl.com/",
+      url: "/img/streetng.jpg",
       industry: "Hospitality & Real Estate",
       impact: "Three business verticals, unified experience",
       testimonial: "Exceptional attention to detail and craftsmanship in every service.",
-      image: "src/img/streetng_img.png",
+      image: "/img/streetng_img.png",
       gradient: "from-green-500 to-teal-600"
     },
     {
@@ -56,7 +56,7 @@ const ClientWork = () => {
       industry: "Renewable Energy",
       impact: "64 MW production, 92% efficiency rate",
       testimonial: "Their innovative approach resulted in significant cost savings and environmental benefits.",
-      image: "src/img/deusel_img.png",
+      image: "/img/deusel_img.png",
       gradient: "from-orange-500 to-red-600"
     }
   ];
