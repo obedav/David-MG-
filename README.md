@@ -1,4 +1,4 @@
-# David Makinde-George — Professional Web Developer
+David Makinde‑George — Full‑Stack Web Developer
 
 Welcome! I’m David Makinde-George, a passionate and results-driven **Full-Stack Web Developer** based in Nigeria. I specialize in building scalable, high-performance web applications using **React**, **Vue.js**, **Node.js**, and modern cloud solutions.
 
