@@ -12,7 +12,7 @@ const Header = () => {
       setScrolled(window.scrollY > 50);
       
       // Active section tracking
-      const sections = ['hero', 'about', 'personal-projects', 'client-work', 'tech-stack', 'certifications', 'aws-journey', 'contact'];
+      const sections = ['hero', 'about', 'metrics', 'personal-projects', 'client-work', 'testimonials', 'tech-stack', 'certifications', 'aws-journey', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
@@ -43,9 +43,9 @@ const Header = () => {
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'personal-projects', label: 'Projects' },
-    { id: 'client-work', label: 'Client Work' },
+    { id: 'client-work', label: 'Clients' },
+    { id: 'testimonials', label: 'Testimonials' },
     { id: 'tech-stack', label: 'Skills' },
-    { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -115,9 +115,9 @@ const Header = () => {
                   {item.id === 'hero' && 'Home'}
                   {item.id === 'about' && 'About'}
                   {item.id === 'personal-projects' && 'Work'}
-                  {item.id === 'client-work' && 'Client'}
+                  {item.id === 'client-work' && 'Clients'}
+                  {item.id === 'testimonials' && 'Reviews'}
                   {item.id === 'tech-stack' && 'Skills'}
-                  {item.id === 'certifications' && 'Certs'}
                   {item.id === 'contact' && 'Contact'}
                   
                   {activeSection === item.id && (

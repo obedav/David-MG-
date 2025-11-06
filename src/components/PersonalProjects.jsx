@@ -42,6 +42,78 @@ const PersonalProjects = () => {
 
   const personalProjects = [
     {
+      name: "SwiftPass Global",
+      category: "Enterprise Visa SaaS Platform",
+      tech: ["Next.js 14", "TypeScript", "Supabase", "Stripe", "M-Pesa", "OCR", "PostgreSQL"],
+      description: "Production-ready visa application platform for 100+ countries. Features 8-step wizard, passport OCR with MRZ validation, dual payment processing (Stripe + M-Pesa), multi-channel notifications, refund management, and admin dashboard with automated workflows.",
+      image: "/img/swiftpass_img.png",
+      features: ["Passport OCR", "Multi-Payment", "Admin Dashboard", "Auto Workflows"],
+      github: "https://github.com/obedav/Swiftpass-visa-platform-dev",
+      demo: "https://swiftpass-visa-platform-dev.vercel.app",
+      gradient: "from-indigo-600 to-purple-700",
+      oceanColor: "from-indigo-500/20 to-purple-600/20"
+    },
+    {
+      name: "Estatia - AI Real Estate",
+      category: "PropTech & AI Platform",
+      tech: [".NET 8", "Next.js 15", "TypeScript", "PostgreSQL", "OpenAI API", "Redis"],
+      description: "AI-powered real estate platform combining intelligent chatbot conversations with comprehensive property management. Features OpenAI integration, analytics dashboard, lead generation, and secure authentication.",
+      image: "/img/estatia_img.png",
+      features: ["AI Chatbot", "Property Management", "Analytics Dashboard", "Lead Generation"],
+      github: "https://github.com/obedav/Estatia",
+      demo: "#",
+      gradient: "from-purple-500 to-indigo-600",
+      oceanColor: "from-purple-400/20 to-indigo-500/20"
+    },
+    {
+      name: "Royal Health Consult",
+      category: "HealthTech Platform",
+      tech: ["TypeScript", "React", "Tailwind CSS", "Healthcare APIs"],
+      description: "Live production healthcare booking platform serving real patients. Enables users to schedule nursing, therapy, monitoring, and emergency services with secure booking system and payment integration.",
+      image: "/img/royal.png",
+      features: ["Online Booking", "Service Catalog", "Emergency Services", "Patient Dashboard"],
+      github: "https://github.com/obedav/Royal-Health-Consult",
+      demo: "https://royalhealthconsult.com/",
+      gradient: "from-emerald-500 to-teal-600",
+      oceanColor: "from-emerald-400/20 to-teal-500/20"
+    },
+    {
+      name: "TunedU - Exam Prep App",
+      category: "EdTech Application",
+      tech: ["TypeScript", "React Native", "Firebase", "Expo"],
+      description: "React Native educational app for practicing JAMB, WAEC, and NECO past questions with instant feedback, progress tracking, and optional premium access. Built for Web and Android platforms.",
+      image: "/img/tunedu_img.png",
+      features: ["Past Questions", "Progress Tracking", "Instant Feedback", "Premium Access"],
+      github: "https://github.com/obedav/TunedU-Edu-App",
+      demo: "#",
+      gradient: "from-blue-500 to-indigo-600",
+      oceanColor: "from-blue-400/20 to-indigo-500/20"
+    },
+    {
+      name: "Eskal Eight Services",
+      category: "E-Commerce Platform",
+      tech: ["JavaScript", "React", "Node.js", "E-commerce APIs"],
+      description: "Comprehensive multi-service ecommerce platform for procurement, logistics, construction, and tech services. Full-stack solution with seamless service integration.",
+      image: "/img/eskal.png",
+      features: ["Multi-Service Hub", "Procurement System", "Logistics Management", "Tech Services"],
+      github: "https://github.com/obedav/Eskal-Eight-Services",
+      demo: "#",
+      gradient: "from-orange-500 to-red-600",
+      oceanColor: "from-orange-400/20 to-red-500/20"
+    },
+    {
+      name: "Ajoturn - Thrift & Savings",
+      category: "FinTech Application",
+      tech: ["JavaScript", "React Native", "Firebase", "Real-time DB"],
+      description: "Modern thrift and contribution (ajo/esusu) app built with React Native. Helps groups save together, contribute securely, and track their progress in real time with Firebase integration.",
+      image: "/img/ajoturn_img.png",
+      features: ["Group Savings", "Real-time Tracking", "Secure Contributions", "Progress Reports"],
+      github: "https://github.com/obedav/Ajoturn",
+      demo: "#",
+      gradient: "from-green-500 to-emerald-600",
+      oceanColor: "from-green-400/20 to-emerald-500/20"
+    },
+    {
       name: "Finance Tracker",
       category: "Financial Management",
       tech: ["Vue.js 3", "Pinia", "Tailwind CSS", "Supabase", "Vite"],
@@ -55,7 +127,7 @@ const PersonalProjects = () => {
     },
     {
       name: "TaskFlow - Task Manager",
-      category: "Productivity Platform", 
+      category: "Productivity Platform",
       tech: ["React", "Node.js", "Express.js", "MongoDB", "JWT", "Tailwind CSS"],
       description: "Enterprise-level task management platform with team collaboration, progress tracking, and analytics. Built with MERN stack and JWT authentication.",
       image: "/img/task_img.png",
@@ -154,7 +226,7 @@ const PersonalProjects = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {personalProjects.map((project, index) => (
             <div 
               key={index} 

@@ -32,8 +32,13 @@ const ClientWork = () => {
       description: "Study abroad consultation platform helping students achieve global education dreams. Features comprehensive services and student success stories.",
       url: "https://tundua.com/",
       industry: "Education",
-      impact: "Students studying in Canada, Germany, UK",
+      impact: "Helping students secure admissions in Canada, Germany, UK",
+      metrics: [
+        { label: "Success Rate", value: "95%" },
+        { label: "Countries", value: "15+" }
+      ],
       testimonial: "Professional guidance that made my medical school dreams in Canada come true!",
+      clientName: "Medical Student",
       image: "/img/tundua_img.png",
       gradient: "from-blue-500 to-indigo-600"
     },
@@ -41,10 +46,15 @@ const ClientWork = () => {
       name: "StreetNG",
       category: "Multi-Business Platform",
       description: "Comprehensive platform combining fine dining, bespoke tailoring, and real estate services under one unified brand experience.",
-      url: "/img/streetng.jpg",
+      url: "./img/streetng_img.png",
       industry: "Hospitality & Real Estate",
-      impact: "Three business verticals, unified experience",
+      impact: "Three business verticals integrated seamlessly",
+      metrics: [
+        { label: "Services", value: "3" },
+        { label: "Customer Rating", value: "4.8/5" }
+      ],
       testimonial: "Exceptional attention to detail and craftsmanship in every service.",
+      clientName: "Business Owner",
       image: "/img/streetng_img.png",
       gradient: "from-green-500 to-teal-600"
     },
@@ -54,10 +64,63 @@ const ClientWork = () => {
       description: "Corporate consulting website for renewable energy solutions with impressive metrics and client testimonials from industry leaders.",
       url: "http://deuselconsult.com/",
       industry: "Renewable Energy",
-      impact: "64 MW production, 92% efficiency rate",
+      impact: "Showcasing 64 MW production capacity",
+      metrics: [
+        { label: "Production", value: "64 MW" },
+        { label: "Efficiency", value: "92%" }
+      ],
       testimonial: "Their innovative approach resulted in significant cost savings and environmental benefits.",
+      clientName: "Energy Director",
       image: "/img/deusel_img.png",
       gradient: "from-orange-500 to-red-600"
+    },
+    {
+      name: "Eliban Music Academy",
+      category: "Music Education",
+      description: "Modern music learning web app with video streaming, booking system, and payment integration. Built with Next.js 14, Supabase, TypeScript, and Tailwind CSS.",
+      url: "https://eliban.org",
+      industry: "Education & Arts",
+      impact: "Online music education and booking platform",
+      metrics: [
+        { label: "Courses", value: "20+" },
+        { label: "Students", value: "150+" }
+      ],
+      testimonial: "The platform transformed how we connect with students and manage bookings.",
+      clientName: "Academy Director",
+      image: "/img/eliban.png",
+      gradient: "from-purple-500 to-pink-600"
+    },
+    {
+      name: "MrCream Hospitality",
+      category: "Hospitality & F&B",
+      description: "Premium Nigerian hospitality experience featuring yoghurt drinks, water park attractions, and luxury cream liqueur. Full-stack application with .NET backend.",
+      url: "#",
+      industry: "Hospitality",
+      impact: "Multi-service hospitality platform",
+      metrics: [
+        { label: "Services", value: "3" },
+        { label: "Locations", value: "2" }
+      ],
+      testimonial: "Beautiful website that captures our brand's premium feel perfectly.",
+      clientName: "Marketing Manager",
+      image: "/img/Mrcream.png",
+      gradient: "from-amber-500 to-orange-600"
+    },
+    {
+      name: "St. Patrick's Parish",
+      category: "Religious Organization",
+      description: "Modern Catholic Church website for St. Patrick's Parish (Lagos). Features online giving (Naira), sermon archive, ministries, and event management.",
+      url: "#",
+      industry: "Religious",
+      impact: "Digital transformation for parish community",
+      metrics: [
+        { label: "Members", value: "2000+" },
+        { label: "Online Giving", value: "Active" }
+      ],
+      testimonial: "Made it so much easier for our community to stay connected and give.",
+      clientName: "Parish Administrator",
+      image: "/img/stpatrick_img.png",
+      gradient: "from-emerald-500 to-green-600"
     }
   ];
 
@@ -75,7 +138,7 @@ const ClientWork = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {clientProjects.map((project, index) => (
             <div 
               key={index} 
@@ -114,20 +177,29 @@ const ClientWork = () => {
 
                 {/* Impact Metrics */}
                 <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl mb-4 border border-white/50 group-hover:bg-white/80 transition-colors duration-300">
-                  <h4 className="text-sm font-semibold text-slate-700 mb-2 flex items-center">
+                  <h4 className="text-sm font-semibold text-slate-700 mb-3 flex items-center">
                     <TrendingUp className={`w-4 h-4 mr-2 text-green-600 transition-transform duration-300 ${
                       hoveredCard === index ? 'scale-110 rotate-12' : ''
                     }`} />
                     Business Impact
                   </h4>
-                  <p className="text-slate-600 text-sm">{project.impact}</p>
+                  <p className="text-slate-600 text-sm mb-3">{project.impact}</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {project.metrics.map((metric, metricIndex) => (
+                      <div key={metricIndex} className="text-center bg-slate-50 rounded-lg p-2">
+                        <div className="text-lg font-bold text-blue-600">{metric.value}</div>
+                        <div className="text-xs text-slate-600">{metric.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Client Testimonial */}
                 <div className={`bg-blue-50/50 backdrop-blur-sm p-4 rounded-xl mb-6 border-l-4 border-blue-500 transition-all duration-300 ${
                   hoveredCard === index ? 'bg-blue-100/50 translate-x-1' : ''
                 }`}>
-                  <p className="text-slate-700 text-sm italic">"{project.testimonial}"</p>
+                  <p className="text-slate-700 text-sm italic mb-2">"{project.testimonial}"</p>
+                  <p className="text-slate-500 text-xs font-medium">— {project.clientName}</p>
                 </div>
 
                 {/* Live Site Button */}

@@ -9,7 +9,7 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   // Elegant typewriter effect
-  const words = ['Professional Web Developer', 'Full-Stack Engineer', 'Problem Solver', 'Team Collaborator'];
+  const words = ['A Full-Stack Developer', 'Enterprise SaaS Architect', 'Payment Systems Integration Expert', 'Building Production Applications'];
   
   useEffect(() => {
     const word = words[currentWord];
@@ -185,10 +185,10 @@ const Hero = () => {
         {/* Description with Ocean Glow */}
         <div className="mb-12 opacity-0 animate-fadeInUp" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
           <p className="text-xl md:text-2xl text-cyan-50 max-w-3xl mx-auto leading-relaxed mb-4 drop-shadow-lg">
-            Building scalable applications and websites that businesses depend on
+            Senior Full-Stack Developer building enterprise SaaS platforms with complex payment integrations
           </p>
           <p className="text-lg text-cyan-100/80 max-w-2xl mx-auto drop-shadow-md">
-            From study abroad platforms to renewable energy consulting - I create solutions that scale
+            Built SwiftPass (Visa Platform) • Stripe + M-Pesa Integration • Passport OCR • 12+ Client Projects Deployed • Next.js, TypeScript, .NET
           </p>
         </div>
 
@@ -196,9 +196,9 @@ const Hero = () => {
         <div className="mb-12 opacity-0 animate-fadeInUp" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
           <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto">
             {[
-              { label: "Projects", value: "15+", delay: 0 },
-              { label: "Industries", value: "4", delay: 100 },
-              { label: "Satisfaction", value: "100%", delay: 200 }
+              { label: "Live Businesses", value: "2", delay: 0 },
+              { label: "Production Apps", value: "15+", delay: 100 },
+              { label: "Uptime", value: "99%+", delay: 200 }
             ].map((stat, index) => (
               <div 
                 key={index}
@@ -220,18 +220,18 @@ const Hero = () => {
         {/* Ocean-themed CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center opacity-0 animate-fadeInUp" style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}>
           <button
-            onClick={() => scrollToSection('personal-projects')}
+            onClick={() => scrollToSection('contact')}
             className="group bg-gradient-to-r from-cyan-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm border border-white/20"
           >
-            <span>View My Applications</span>
+            <span>Let's Work Together</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
           <button
-            onClick={() => scrollToSection('client-work')}
+            onClick={() => scrollToSection('personal-projects')}
             className="group border-2 border-cyan-300/60 text-cyan-100 px-8 py-4 rounded-xl font-semibold hover:border-orange-300 hover:text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 flex items-center justify-center space-x-2"
           >
             <Globe className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            <span>See Client Success</span>
+            <span>View Portfolio</span>
           </button>
         </div>
       </div>
